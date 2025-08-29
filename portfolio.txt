@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>معرض أعمالي</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      margin-bottom: 30px;
+    }
+    
+    /* تصميم الكروت الرئيسية */
+    .projects-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .project-card {
+      width: 350px;
+      height: 450px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .project-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+    
+    .project-card h2 {
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      color: #333;
+    }
+    
+    /* تصميم معرض الصور (يظهر عند النقر على الكرت) */
+    .gallery-section {
+      display: none;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+    
+    .gallery-section.active {
+      display: block;
+    }
+    
+    .back-button {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .gallery img {
+      width: 280px;
+      height: 500px;
+      object-fit: contain;
+      background: #f8f8f8;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>محمد يزن الصيداوي</h1>
+    <p>مطور تطبيقات جوال | متخصص في Flutter</p>
+  </div>
+
+  <!-- الكروت الرئيسية -->
+  <div class="projects-container" id="main-view">
+    <div class="project-card" data-project="dahab">
+      <img src="images/dahab/12.jpg" alt="تطبيق أصالة الذهب">
+      <h2>تطبيق أصالة الذهب</h2>
+    </div>
+    
+    <div class="project-card" data-project="mohandes">
+      <img src="images/mohandes/11.jpg" alt="تطبيق المهندس">
+      <h2>تطبيق المهندس</h2>
+    </div>
+
+  <div class="project-card" data-project="A2Z">
+      <img src="images/A2Z/9.jpg" alt="تطبيق A2Z">
+      <h2>تطبيق A2Z</h2>
+    </div>
+ <div class="project-card" data-project="shkawi">
+      <img src="images/shkawi/1.jpg" alt="تطبيق شكاوي">
+      <h2>تطبيق شكاوي</h2>
+    </div>
+ <div class="project-card" data-project="malkanat">
+      <img src="images/malkanat/1.jpg" alt="تطبيق مالكانات">
+      <h2>تطبيق مالكانات</h2>
+    </div>
+  </div>
+
+  <!-- معرض أصالة الذهب (مخفي في البداية) -->
+  <div class="gallery-section" id="dahab-gallery">
+    <h2>تطبيق أصالة الذهب</h2>
+    <div class="gallery">
+      <img src="images/dahab/0.jpg" alt="واجهة التطبيق">
+      <img src="images/dahab/1.jpg" alt="شاشة رئيسية">
+      <img src="images/dahab/2.jpg" alt="واجهة المستخدم">
+      <img src="images/dahab/3.jpg" alt="تصميم التطبيق">
+      <img src="images/dahab/4.jpg" alt="إعدادات التطبيق">
+      <img src="images/dahab/5.jpg" alt="ميزات التطبيق">
+      <img src="images/dahab/6.jpg" alt="واجهة أخرى">
+      <img src="images/dahab/7.jpg" alt="تصميم الشاشات">
+      <img src="images/dahab/8.jpg" alt="واجهة المستخدم">
+      <img src="images/dahab/9.jpg" alt="إعدادات التطبيق">
+      <img src="images/dahab/10.jpg" alt="ميزات التطبيق">
+      <img src="images/dahab/11.jpg" alt="واجهة أخرى">
+      <img src="images/dahab/12.jpg" alt="تصميم الشاشات">
+      <img src="images/dahab/13.jpg" alt="واجهة المستخدم">
+      <img src="images/dahab/14.jpg" alt="إعدادات التطبيق">
+    </div>
+    <button class="back-button">العودة للرئيسية</button>
+  </div>
+
+ <!-- معرض A2Z - التصحيح هنا -->
+  <div class="gallery-section" id="A2Z-gallery"> <!-- تم إزالة المسافة -->
+    <h2>تطبيق A2Z</h2>
+    <div class="gallery">
+      <img src="images/A2Z/0.jpg" alt="واجهة التطبيق">
+      <img src="images/A2Z/1.jpg" alt="شاشة رئيسية">
+      <img src="images/A2Z/2.jpg" alt="واجهة المستخدم">
+      <img src="images/A2Z/3.jpg" alt="تصميم التطبيق">
+      <img src="images/A2Z/4.jpg" alt="إعدادات التطبيق">
+      <img src="images/A2Z/5.jpg" alt="ميزات التطبيق">
+      <img src="images/A2Z/6.jpg" alt="واجهة أخرى">
+      <img src="images/A2Z/7.jpg" alt="تصميم الشاشات">
+      <img src="images/A2Z/8.jpg" alt="واجهة المستخدم">
+      <img src="images/A2Z/9.jpg" alt="إعدادات التطبيق">
+      <img src="images/A2Z/10.jpg" alt="ميزات التطبيق">
+      <img src="images/A2Z/12.jpg" alt="تصميم الشاشات">
+      <img src="images/A2Z/13.jpg" alt="واجهة المستخدم">
+      <img src="images/A2Z/14.jpg" alt="إعدادات التطبيق">
+      <img src="images/A2Z/15.jpg" alt="إعدادات التطبيق">
+      <img src="images/A2Z/16.jpg" alt="إعدادات التطبيق">
+      <img src="images/A2Z/17.jpg" alt="إعدادات التطبيق">
+    </div>
+    <button class="back-button">العودة للرئيسية</button>
+  </div>
+
+
+ <!-- معرض مالكانات (مخفي في البداية) -->
+  <div class="gallery-section" id="malkanat-gallery">
+    <h2>تطبيق مالكانات</h2>
+    <div class="gallery">
+      <img src="images/malkanat/1.jpg" alt="شاشة رئيسية">
+      <img src="images/malkanat/2.jpg" alt="واجهة المستخدم">
+      <img src="images/malkanat/3.jpg" alt="تصميم التطبيق">
+      <img src="images/malkanat/4.jpg" alt="إعدادات التطبيق">
+      <img src="images/malkanat/5.jpg" alt="ميزات التطبيق">
+      <img src="images/malkanat/6.jpg" alt="واجهة أخرى">
+      <img src="images/malkanat/7.jpg" alt="تصميم الشاشات">
+      <img src="images/malkanat/8.jpg" alt="واجهة المستخدم">
+      <img src="images/malkanat/9.jpg" alt="إعدادات التطبيق">
+  <img src="images/malkanat/10.jpg" alt="إعدادات">
+
+      
+    </div>
+    <button class="back-button">العودة للرئيسية</button>
+  </div>
+ <!-- معرض شكاوي (مخفي في البداية) -->
+  <div class="gallery-section" id="shkawi-gallery">
+    <h2>تطبيق مالكانات</h2>
+    <div class="gallery">
+      <img src="images/shkawi/1.jpg" alt="شاشة رئيسية">
+      <img src="images/shkawi/2.jpg" alt="واجهة المستخدم">
+      <img src="images/shkawi/3.jpg" alt="تصميم التطبيق">
+      <img src="images/shkawi/4.jpg" alt="إعدادات التطبيق">
+
+
+      
+    </div>
+    <button class="back-button">العودة للرئيسية</button>
+  </div>
+  <!-- معرض المهندس (مخفي في البداية) -->
+  <div class="gallery-section" id="mohandes-gallery">
+    <h2>تطبيق المهندس</h2>
+    <div class="gallery">
+      <img src="images/mohandes/1.jpg" alt="واجهة التطبيق">
+      <img src="images/mohandes/2.jpg" alt="شاشة رئيسية">
+      <img src="images/mohandes/3.jpg" alt="واجهة المستخدم">
+      <img src="images/mohandes/4.jpg" alt="تصميم التطبيق">
+      <img src="images/mohandes/5.jpg" alt="إعدادات التطبيق">
+      <img src="images/mohandes/6.jpg" alt="ميزات التطبيق">
+      <img src="images/mohandes/7.jpg" alt="واجهة أخرى">
+      <img src="images/mohandes/8.jpg" alt="تصميم الشاشات">
+      <img src="images/mohandes/9.jpg" alt="واجهة المستخدم">
+      <img src="images/mohandes/10.jpg" alt="إعدادات التطبيق">
+      <img src="images/mohandes/11.jpg" alt="ميزات التطبيق">
+      <img src="images/mohandes/12.jpg" alt="واجهة أخرى">
+      <img src="images/mohandes/13.jpg" alt="تصميم الشاشات">
+      <img src="images/mohandes/14.jpg" alt="واجهة المستخدم">
+      <img src="images/mohandes/15.jpg" alt="إعدادات التطبيق">
+      <img src="images/mohandes/16.jpg" alt="ميزات التطبيق">
+    </div>
+    <button class="back-button">العودة للرئيسية</button>
+  </div>
+
+  <script>
+    // التحكم في عرض المعارض
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const project = this.getAttribute('data-project');
+        document.getElementById('main-view').style.display = 'none';
+        document.getElementById(`${project}-gallery`).classList.add('active');
+      });
+    });
+
+    // زر العودة للرئيسية
+    document.querySelectorAll('.back-button').forEach(button => {
+      button.addEventListener('click', function() {
+        document.querySelectorAll('.gallery-section').forEach(section => {
+          section.classList.remove('active');
+        });
+        document.getElementById('main-view').style.display = 'flex';
+        
+        // التمرير لأعلى الصفحة
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
